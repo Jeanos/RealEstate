@@ -4,9 +4,11 @@
       <title>Criteria ChatBot</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <style>
          .checked {
@@ -15,12 +17,11 @@
         .pointer {
           cursor: pointer;
         }
-         @media (max-width: 641px) {
+        /* @media (max-width: 641px) {
              .fa {
                display: none;
              }
-          }
-}
+          }*/
         .pointer:hover{
           background: #eee;
           color: #000;
@@ -35,67 +36,70 @@
       </div>
       <div class="container">
          <div class="row">
-            <div class="col-sm-6 col-xs-6">
-              <div class="form-group">
-                <label for="city">City</label>
-                <select class="form-control" id="city">
-                  <option>Vancouver</option>
-                  <option>Burnaby</option>
-                  <option>Surrey</option>
-                  <option>West Vancouver</option>
-                </select>
-              </div>
-               <div class="form-group">
-                <label for="bedrooms"><i class="fa fa-bed" style="font-size:18px ;"></i>  Bedrooms</label>
-                <select class="form-control" id="bedrooms">
-                  <option>1+</option>
-                  <option>2+</option>
-                  <option>3+</option>
-                  <option>4+</option>
-                  <option>5+</option>
-                </select>
-              </div>
-               <div class="form-group">
-                <label for="minBudget"> Min.Budget</label>
-                <select class="form-control" id="minBudget">
-                  <option>$50,000</option>
-                  <option>$100,000</option>
-                  <option>$200,000</option>
-                  <option>$300,000</option>
-                </select>
-              </div>
-            </div>
-            
-            <div class="col-sm-6 col-xs-6">
-               <div class="form-group">
-                <label for="typeProperty">Type of Property</label>
-                <select class="form-control" id="typeProperty">
-                  <option>TownHouse</option>
-                  <option>Appartment</option>
-                  <option>Single Family Home</option>
-                  <option>Condominium</option>
-                </select>
-              </div>
-               <div class="form-group">
-                <label for="bathrooms"><i class="fa fa-bath" style="font-size:18px"> </i> Bathrooms</label>
-                <select class="form-control" id="bathrooms">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </select>
-              </div>
-               <div class="form-group">
-                <label for="maxBudget"> Max.Budget</label>
-                <select class="form-control" id="maxBudget">
-                  <option>$200,000</option>
-                  <option>$300,000</option>
-                  <option>$400,000</option>
-                  <option>$500,000</option>
-                </select>
-              </div>
+            <div class="col-6 col-sm-6 col-md-6">
+              <form role="form">
+            <div class="form-group">
+            <label for="city">City</label>
+            <select class="form-control" id="city">
+              <option>Vancouver</option>
+              <option>Burnaby</option>
+              <option>Surrey</option>
+              <option>West Vancouver</option>
+            </select>
+          </div>
+           <div class="form-group">
+            <label for="bedrooms"><i class="fa fa-bed" style="font-size:18px ;"></i>  Bedrooms</label>
+            <select class="form-control" id="bedrooms">
+              <option>1+</option>
+              <option>2+</option>
+              <option>3+</option>
+              <option>4+</option>
+              <option>5+</option>
+            </select>
+          </div>
+           <div class="form-group">
+            <label for="minBudget"> Min.Budget</label>
+            <select class="form-control" id="minBudget">
+              <option>$50,000</option>
+              <option>$100,000</option>
+              <option>$200,000</option>
+              <option>$300,000</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="col-6 col-sm-6 col-md-6">
+           <div class="form-group">
+            <label for="typeProperty">Type of Property</label>
+            <select class="form-control" id="typeProperty">
+              <option>TownHouse</option>
+              <option>Appartment</option>
+              <option>Single Family Home</option>
+              <option>Condominium</option>
+            </select>
+          </div>
+           <div class="form-group">
+            <label for="bathrooms"><i class="fa fa-bath" style="font-size:18px"> </i> Bathrooms</label>
+            <select class="form-control" id="bathrooms">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+           <div class="form-group">
+            <label for="maxBudget"> Max.Budget</label>
+            <select class="form-control" id="maxBudget">
+              <option>$200,000</option>
+              <option>$300,000</option>
+              <option>$400,000</option>
+              <option>$500,000</option>
+            </select>
+          </div>
+        </div>
 
-            </div>
+            </form>
+              
             <div class="col-sm-12">
                <button class="btn btn-block btn-primary">
                  Find..
