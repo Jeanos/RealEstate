@@ -151,18 +151,19 @@
 
 
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Type the menu ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <input onkeyup="myFunction()" type="text" class="form-control" id="searchBar" placeholder="Type the menu ..." aria-label="Recipient's username"
+        aria-describedby="basic-addon2">
       <div class="input-group-append">
         <button class="btn btn-primary" type="button">search</button>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row myDiv">
       <div class="col-sm-12">
         <p class="slogan">Our menu in images</p>
         <div class="list-group">
-          <div class="list-group-item list-group-item-action">
+          <div class="list-group-item list-group-item-action target">
             <div class=" col-12 ">
               <div class="left col-4">
                 <img class="img-right" src="https://www.easylebaneserecipes.com/wp-content/uploads/2018/06/Vegetarian-Recipe-Lebanese-Hummus-500x500.png"
@@ -187,14 +188,14 @@
             <div id="hummus" class="collapse ">
               <h2>Hummus</h2>
               <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee; padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> $ 13.5</div>
-              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
+              <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-star" style="font-size:18px ;"> </i> </div>
               <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee;  padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> </div>
               <p>Details here..</p>
 
             </div>
           </a>
 
-          <div class="list-group-item list-group-item-action">
+          <div class="list-group-item list-group-item-action target">
             <div class=" col-12 ">
               <div class="left col-4">
                 <img class="img-right" src="https://www.courtneyssweets.com/wp-content/uploads/2018/02/baked-hot-wings-10-500x500.jpg" alt="">
@@ -214,7 +215,7 @@
               </div>
             </div>
           </div>
-          <a class="list-group-item list-group-item-action">
+          <a class="list-group-item list-group-item-action target">
             <div id="chickenwings" class="collapse ">
               <h2>chickenwings</h2>
               <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee; padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> $ 13.5</div>
@@ -226,7 +227,7 @@
           </a>
 
 
-          <div class="list-group-item list-group-item-action">
+          <div class="list-group-item list-group-item-action target">
             <div class=" col-12 ">
               <div class="left col-4">
                 <img class="img-right" src="https://www.readyseteat.com/sites/g/files/qyyrlu501/files/uploadedImages/img_8054_8923.jpg" alt="">
@@ -246,7 +247,7 @@
               </div>
             </div>
           </div>
-          <a class="list-group-item list-group-item-action">
+          <a class="list-group-item list-group-item-action ">
             <div id="demo" class="collapse ">
               <h2>Lettuce Wraps</h2>
               <div class="col-4 col-sm-4 col-md-4 pointer left" style="margin:0px; border: 1px solid #eee; padding: 7px; font-size: 14px;"><i class="fa fa-money" style="font-size:18px ;"> </i> $ 13.5</div>
@@ -263,6 +264,21 @@
 
     </div>
   </div>
+  <script>
+    function myFunction() {
+      var input = document.getElementById("searchBar");
+      var filter = input.value.toLowerCase();
+      var nodes = document.getElementsByClassName('target');
+
+      for (i = 0; i < nodes.length; i++) {
+        if (nodes[i].innerText.toLowerCase().includes(filter)) {
+          nodes[i].style.display = "block";
+        } else {
+          nodes[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 
 </body>
 
